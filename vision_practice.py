@@ -56,15 +56,8 @@ def show_image_with_corners(image, coords, title="Corners detected"):
     plt.plot(coords[:, 1], coords[:, 0], '+r', markersize=15)
     plt.axis('off')
     plt.show()
-
-
-#How to inspect function source code    
-import inspect
-lines = inspect.getsource(show_image_with_corners)
-print(lines)
     
-#show_image(rocket)
-#show_image(color.rgb2gray(rocket))
+
 red = phoenix[:,:,0]; green = phoenix[:,:,1]; blue=phoenix[:,:,2]
 plt.hist(red.ravel(), bins=256);
 plt.ylabel('Pixel Frequencies'); plt.xlabel('Pixel Intensities') 
@@ -77,4 +70,3 @@ plt.ylabel('Pixel Frequencies'); plt.xlabel('Pixel Intensities')
 plt.title('Blue Pixels'); plt.show()
 
 
-from tensorflow.keras.preprocessing.image import ImageDataGenerator
